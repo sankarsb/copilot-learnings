@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWS EC2 Bill — March 2026</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0f1117;
+      color: #e6e6e6;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 2.5rem; }
+    header h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #ff9900;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.6rem;
+    }
+    .total-badge {
+      display: inline-block;
+      background: #ff9900;
+      color: #0f1117;
+      font-size: 2.8rem;
+      font-weight: 700;
+      padding: 0.4rem 1.4rem;
+      border-radius: 8px;
+      letter-spacing: -0.02em;
+    }
+    .total-label {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 0.5rem;
+    }
+    h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.8rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    thead th {
+      background: #1c1f2b;
+      color: #ff9900;
+      text-align: left;
+      padding: 0.65rem 1rem;
+      font-weight: 600;
+      border-bottom: 2px solid #ff9900;
+    }
+    thead th:last-child { text-align: right; }
+    tbody tr:nth-child(odd)  { background: #141720; }
+    tbody tr:nth-child(even) { background: #0f1117; }
+    tbody tr:hover { background: #1e2235; }
+    tbody td {
+      padding: 0.55rem 1rem;
+      border-bottom: 1px solid #1e2235;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.88rem;
+    }
+    tbody td:last-child { text-align: right; color: #7ec8a0; }
+    .bar-cell { width: 160px; }
+    .bar-bg {
+      background: #1e2235;
+      border-radius: 3px;
+      height: 8px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      background: #ff9900;
+      height: 8px;
+      border-radius: 3px;
+      min-width: 2px;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.78rem;
+      color: #555;
+      text-align: center;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AWS EC2 Bill &mdash; March 2026</h1>
+      <div class="total-badge">$1,735.46</div>
+      <div class="total-label">EC2-Compute Only &bull; USD &bull; Unblended</div>
+    </header>
+
+    <h2>Usage-Type Breakdown</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Usage Type</th>
+          <th class="bar-cell">Share</th>
+          <th>Cost (USD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>BoxUsage:m6i.2xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div></td><td>$488.80</td></tr>
+        <tr><td>2</td><td>BoxUsage:m6i.xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:45.8%"></div></div></td><td>$224.07</td></tr>
+        <tr><td>3</td><td>SpotUsage:c5.xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:29.4%"></div></div></td><td>$143.80</td></tr>
+        <tr><td>4</td><td>BoxUsage:c5.xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:24.4%"></div></div></td><td>$119.30</td></tr>
+        <tr><td>5</td><td>SpotUsage:c6i.xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:24.2%"></div></div></td><td>$118.48</td></tr>
+        <tr><td>6</td><td>BoxUsage:c6i.large</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:12.7%"></div></div></td><td>$61.95</td></tr>
+        <tr><td>7</td><td>BoxUsage:m6i.large</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:12.5%"></div></div></td><td>$61.34</td></tr>
+        <tr><td>8</td><td>USW2-BoxUsage:m6i.2xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:12.2%"></div></div></td><td>$59.71</td></tr>
+        <tr><td>9</td><td>BoxUsage:t3.xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:10.6%"></div></div></td><td>$51.75</td></tr>
+        <tr><td>10</td><td>DataTransfer-Out-Bytes</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:10.2%"></div></div></td><td>$49.86</td></tr>
+        <tr><td>11</td><td>SpotUsage:m6i.xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:9.4%"></div></div></td><td>$46.09</td></tr>
+        <tr><td>12</td><td>BoxUsage:t3.large</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:8.9%"></div></div></td><td>$43.75</td></tr>
+        <tr><td>13</td><td>USW2-SpotUsage:m5.2xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:7.8%"></div></div></td><td>$37.96</td></tr>
+        <tr><td>14</td><td>BoxUsage:r7a.medium</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:6.0%"></div></div></td><td>$29.54</td></tr>
+        <tr><td>15</td><td>USW2-BoxUsage:m6i.xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:5.8%"></div></div></td><td>$28.26</td></tr>
+        <tr><td>16</td><td>SpotUsage:m5.xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:4.5%"></div></div></td><td>$22.02</td></tr>
+        <tr><td>17</td><td>USW2-SpotUsage:c5.xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:3.8%"></div></div></td><td>$18.78</td></tr>
+        <tr><td>18</td><td>USW2-SpotUsage:m5.xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:3.5%"></div></div></td><td>$17.03</td></tr>
+        <tr><td>19</td><td>USW2-BoxUsage:t3.large</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:3.2%"></div></div></td><td>$15.56</td></tr>
+        <tr><td>20</td><td>USW2-BoxUsage:t3.xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:2.9%"></div></div></td><td>$14.35</td></tr>
+        <tr><td>21</td><td>USW2-BoxUsage:c6i.large</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:2.7%"></div></div></td><td>$13.33</td></tr>
+        <tr><td>22</td><td>USW2-BoxUsage:m6i.large</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:2.6%"></div></div></td><td>$12.74</td></tr>
+        <tr><td>23</td><td>USW2-SpotUsage:c6i.xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:2.2%"></div></div></td><td>$10.54</td></tr>
+        <tr><td>24</td><td>USW2-SpotUsage:c7i.xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:1.9%"></div></div></td><td>$9.53</td></tr>
+        <tr><td>25</td><td>USW2-SpotUsage:c5.2xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:1.9%"></div></div></td><td>$9.32</td></tr>
+        <tr><td>26</td><td>USW2-BoxUsage:r7a.medium</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:1.5%"></div></div></td><td>$7.27</td></tr>
+        <tr><td>27</td><td>USW2-DataTransfer-Out-Bytes</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:1.4%"></div></div></td><td>$6.91</td></tr>
+        <tr><td>28</td><td>USW2-SpotUsage:m6i.xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:1.3%"></div></div></td><td>$6.54</td></tr>
+        <tr><td>29</td><td>SpotUsage:c7i.xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:0.95%"></div></div></td><td>$4.66</td></tr>
+        <tr><td>30</td><td>SpotUsage:m5.2xlarge</td><td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:0.45%"></div></div></td><td>$2.20</td></tr>
+      </tbody>
+    </table>
+
+    <footer>
+      <p>Full month 2026-03-01 to 2026-04-01 &bull; Unblended USD &bull; EC2-Compute only &bull; Sub-cent/zero usage_types omitted from rows.</p>
+      <p style="margin-top:0.4rem;">Generated by <strong>bill-to-html-9010</strong> pipeline &bull; Stage 1: EC2 Billing Specialist &bull; Stage 2: Terraform Docker 9010</p>
+    </footer>
+  </div>
+</body>
+</html>

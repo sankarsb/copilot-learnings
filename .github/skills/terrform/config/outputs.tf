@@ -51,8 +51,8 @@ output "logs_volume_name" {
 }
 
 output "container_status" {
-  description = "Current status of the container"
-  value       = docker_container.nginx.status
+  description = "Whether the container must be running"
+  value       = docker_container.nginx.must_run
 }
 
 output "container_memory" {
@@ -83,11 +83,11 @@ output "healthcheck_status" {
 output "environment_info" {
   description = "Environment and deployment information"
   value = {
-    environment     = var.environment
-    container_name  = var.container_name
-    docker_network  = var.network_name
-    timezone        = var.timezone
-    restart_policy  = var.restart_policy
+    environment    = var.environment
+    container_name = var.container_name
+    docker_network = var.network_name
+    timezone       = var.timezone
+    restart_policy = var.restart_policy
   }
 }
 

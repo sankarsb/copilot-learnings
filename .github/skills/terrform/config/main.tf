@@ -52,15 +52,15 @@ resource "docker_volume" "nginx_logs" {
 
 # Create Nginx container
 resource "docker_container" "nginx" {
-  name              = var.container_name
-  image             = docker_image.nginx.image_id
-  restart_policy    = var.restart_policy
-  must_run          = true
-  memory            = var.container_memory
-  memory_swap       = var.container_memory_swap
-  cpu_shares        = var.container_cpu_shares
-  log_driver        = var.log_driver
-  network_mode      = docker_network.nginx_network.name
+  name         = var.container_name
+  image        = docker_image.nginx.image_id
+  restart      = var.restart_policy
+  must_run     = true
+  memory       = var.container_memory
+  memory_swap  = var.container_memory_swap
+  cpu_shares   = var.container_cpu_shares
+  log_driver   = var.log_driver
+  network_mode = docker_network.nginx_network.name
 
   # Port mapping - expose 8000
   ports {
